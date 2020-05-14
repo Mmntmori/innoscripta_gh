@@ -14,77 +14,77 @@ let initialState = {
     shopList: [{
         id: '1',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Альфредо',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: 'https://ericasrecipes-com.exactdn.com/wp-content/uploads/2014/03/Four-Cheese-Shrimp-Scampi-Pizza-5W.jpg?strip=all&lossy=1&resize=700%2C488&ssl=1'
     }, {
         id: '2',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Деревенская',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: null
 
     }, {
         id: '3',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Пепперони',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: null
 
     }, {
         id: '4',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Маргарита',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: 'https://cache.marieclaire.fr/data/photo/w1000_c17/cuisine/47/pizza.jpg'
 
     }, {
         id: '5',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Супер-мясная',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: null
 
     }, {
         id: '6',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Суприм',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: 'https://hdwallpaper.move.pk/wp-content/uploads/2015/02/hot-pizza.jpg'
 
     },{
         id: '7',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Вегетарианская',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: null
     },{
         id: '8',
         price: getRandomInt(1000),
-        title: 'Название пиццы',
+        title: 'Сальмоне',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Id at neque facilis quisquam! Quisquam architecto dolor, voluptate assumenda nesciunt reiciendis deleniti! Repellendus odio porro officia, quos ea excepturi deleniti perferendis.',
         image: 'https://ericasrecipes-com.exactdn.com/wp-content/uploads/2014/03/Four-Cheese-Shrimp-Scampi-Pizza-5W.jpg?strip=all&lossy=1&resize=700%2C488&ssl=1'
     }],
     cart: [
         {
             id: '6',
-            title: 'Название пиццы',
+            title: 'Суприм',
             price: getRandomInt(1000),
             image: 'https://hdwallpaper.move.pk/wp-content/uploads/2015/02/hot-pizza.jpg',
             count: 1
         },
         {
             id: '5',
-            title: 'Название пиццы',
+            title: 'Супер-мясная',
             price: getRandomInt(1000),
-            image: 'https://hdwallpaper.move.pk/wp-content/uploads/2015/02/hot-pizza.jpg',
+            image:  null,
             count: 3
         },
         {
             id: '2',
-            title: 'Название пиццы',
+            title: 'Деревенская',
             price: getRandomInt(1000),
-            image: 'https://hdwallpaper.move.pk/wp-content/uploads/2015/02/hot-pizza.jpg',
+            image: null,
             count: 6
         }
     ]
