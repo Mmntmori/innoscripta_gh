@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header'
-import ShopPage from './components/ShopPage/ShopPage'
+import Routing from "./components/Routing/Routing";
+import {withRouter} from "react-router";
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <ShopPage/>
-    </div >
+      <div className="App">
+        <Routing/>
+      </div>
   );
 }
 
-export default App;
+export default withRouter(App)

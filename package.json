@@ -36,8 +36,13 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
+    "history": "^5.0.0",
     "react-axios": "^2.0.3",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-saga": "^0.3.1",
+    "redux": "^4.0.5",
+    "redux-actions": "^2.6.5"
   }
 }

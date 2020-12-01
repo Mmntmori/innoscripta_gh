@@ -11,17 +11,10 @@
     width: 120px;
 }
 
-.header__logo-img {    
+.header__logo-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-}
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
 }
 
 .header__title {
