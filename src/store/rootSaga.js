@@ -1,8 +1,8 @@
-import { all, call } from "redux-saga/effects";
-import { controlPanelWatcher } from "../components/ControlPanel/redux/controlPanelSaga";
+import {all, call} from "redux-saga/effects";
+import {shopPageWatcher} from "../components/ShopPage/redux/shopPageSaga";
 
 export default function* rootSaga() {
   yield all([
-    call(controlPanelWatcher),
+    call(shopPageWatcher),
   ]);
 }

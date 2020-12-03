@@ -10,8 +10,7 @@ const ShopCart = ({
                     makeOrder
                   }) => {
   let cartSum = 0;
-  const cartElements = cart.map((e, i) => {
-    cartSum += e.price * e.count;
+  const cartElements = cart && cart.map((e, i) => {
     return (
       <div className='cart-item' id={e.id} key={e.id}>
         <div className='cart-item__image'>
@@ -38,11 +37,11 @@ const ShopCart = ({
               </p>
             </div>
             <button type='button' onClick={() => {
-              handleItemCount(-1, i)
+              handleItemCount(-1, e.id)
             }}>-
             </button>
             <button type='button' onClick={() => {
-              handleItemCount(1, i)
+              handleItemCount(1, e.id)
             }}>+
             </button>
             <button type='button' onClick={() => {

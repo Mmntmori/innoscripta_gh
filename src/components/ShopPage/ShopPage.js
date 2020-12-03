@@ -1,32 +1,46 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './ShopPage.css'
 import {useDispatch, useSelector} from 'react-redux';
-// import {addToCart, deleteFromCart, hanbldeItemCount, cleanCart, makeOrder} from '../../store/shopReducer'
 import ShopList from "../ShopList/ShopList";
 import ShopCart from "../ShopCart/ShopCart";
+import {
+  addToCart,
+  cleanCart,
+  deleteFromCart,
+  getCart,
+  getShopItems,
+  handleItemCount,
+  makeOrder
+} from "./actions/shopPageActions";
 
 function ShopPage() {
   const shopList = useSelector(state => state.shop.list)
   const cart = useSelector(state => state.shop.cart)
   const dispatch = useDispatch()
-  const addToCart = (item) => {
-    // dispatch(addToCart(item))
+
+  const addItemToCart = (item) => {
+    dispatch(addToCart(item))
   }
-  const deleteFromCart = (index) => {
-    // dispatch(deleteFromCart(index))
+  const deleteItemFromCart = (index) => {
+    dispatch(deleteFromCart(index))
   }
 
-  const handleItemCount = (count, index) => {
-    // dispatch(handleItemCount(count, index))
+  const handleCartItemCount = (count, id) => {
+    dispatch(handleItemCount({count, id}))
   }
 
-  const cleanCart = () => {
-    // dispatch(cleanCart())
+  const cleanFullCart = () => {
+    dispatch(cleanCart())
   }
 
-  const makeOrder = () => {
-    // dispatch(makeOrder())
+  const handleMakeOrder = () => {
+    dispatch(makeOrder())
   }
+
+  useEffect(() => {
+    dispatch(getShopItems())
+    dispatch(getCart())
+  }, [])
 
   return (
     <div className='shop-page'>
@@ -34,14 +48,14 @@ function ShopPage() {
         <div className="row">
           <ShopList
             shopList={shopList}
-            addToCart={addToCart}
+            addToCart={addItemToCart}
           />
           <ShopCart
             cart={cart}
-            deleteFromCart={deleteFromCart}
-            handleItemCount={handleItemCount}
-            cleanCart={cleanCart}
-            makeOrder={makeOrder}
+            deleteFromCart={deleteItemFromCart}
+            handleItemCount={handleCartItemCount}
+            cleanCart={cleanFullCart}
+            makeOrder={handleMakeOrder}
           />
         </div>
       </div>

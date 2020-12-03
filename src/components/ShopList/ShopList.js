@@ -2,7 +2,7 @@ import photo from "../../assets/images/pizza-svgrepo-com.svg";
 import React from "react";
 
 function ShopList({shopList, addToCart}) {
-  let listElements = shopList.map((e) => {
+  const listElements = shopList.map((e) => {
     return (
       <div className='shop-page__item shop-item' key={e.id} id={e.id}>
         <div className='shop-item__photo'>
@@ -21,11 +21,11 @@ function ShopList({shopList, addToCart}) {
         </div>
         <div className='shop-item__controls'>
           <div className='cart-item__controls'>
-            {/* <div className='cart-item__amount'>
-                            <button type='button'>-</button>
-                            <input placeholder='Количество' type='text' />
-                            <button type='button'>+</button>
-                        </div> */}
+            {/*<div className='cart-item__amount'>*/}
+            {/*  <button type='button'>-</button>*/}
+            {/*  <input placeholder='Количество' type='text'/>*/}
+            {/*  <button type='button'>+</button>*/}
+            {/*</div>*/}
             <button type='button' onClick={() => {
               addToCart(e)
             }}>Добавить в корзину
@@ -35,6 +35,7 @@ function ShopList({shopList, addToCart}) {
       </div>
     )
   });
+
   return (
     <div className='shop-page__list'>
       {listElements}

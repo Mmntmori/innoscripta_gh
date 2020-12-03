@@ -1,19 +1,18 @@
-const LocalStorageService = function() {
-  const setItem = function(key, obj) {
+const LocalStorageService = function () {
+  const setItem = function (key, item) {
     localStorage.setItem(
       key,
-      JSON.stringify({obj})
+      JSON.stringify([...item])
     );
   }
 
-  const removeItem = function(key) {
+  const removeItem = function (key) {
     localStorage.removeItem(key);
   }
 
-  const getItem = function(key) {
+  const getItem = function (key) {
     const item = localStorage.getItem(key);
-    return item && this.validate(JSON.parse(item))
-      ? JSON.parse(item)
+    return item ? JSON.parse(item)
       : null;
   }
 
